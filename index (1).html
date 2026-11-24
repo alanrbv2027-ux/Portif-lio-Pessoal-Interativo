@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal Interativo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .portfolio-container {
+            background-color: #ffffff;
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        /* Estilo dos campos de entrada editáveis */
+        .editable-input {
+            width: 100%;
+            border: 2px dashed #cbd5e1;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-family: inherit;
+            font-size: inherit;
+            background-color: #f8fafc;
+            color: #334155;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+            margin-bottom: 12px;
+        }
+        .editable-input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+        }
+        .name-title {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1a73e8;
+            text-align: center;
+        }
+        .desc-text {
+            height: 80px;
+            resize: vertical;
+        }
+        h2 {
+            color: #1a73e8;
+            border-left: 4px solid #1a73e8;
+            padding-left: 10px;
+            margin-top: 30px;
+            font-size: 1.4em;
+        }
+        .skills-group, .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .label-text {
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 2px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        <form onsubmit="event.preventDefault();">
+            <!-- Cabeçalho Editável -->
+            <header>
+                <span class="label-text">Seu Nome Completo (Título Principal)</span>
+                <input type="text" class="editable-input name-title" value="Seu Nome Completo" placeholder="Digite seu nome...">
+                
+                <span class="label-text">Breve descrição sobre você (2-3 frases)</span>
+                <textarea class="editable-input desc-text" placeholder="Escreva sobre você...">Estudante de Desenvolvimento Web apaixonado por criar soluções interativas e eficientes. Busco sempre aprender novas tecnologias para construir aplicações modernas e responsivas.</textarea>
+            </header>
+
+            <!-- Habilidades Editáveis -->
+            <section>
+                <h2>Minhas Habilidades</h2>
+                <div class="skills-group">
+                    <span class="label-text">Habilidade 1</span>
+                    <input type="text" class="editable-input" value="Desenvolvimento Frontend (HTML5, CSS3, JavaScript)">
+                    
+                    <span class="label-text">Habilidade 2</span>
+                    <input type="text" class="editable-input" value="Resolução de Problemas e Lógica de Programação">
+                    
+                    <span class="label-text">Habilidade 3</span>
+                    <input type="text" class="editable-input" value="Versionamento de código com Git & GitHub">
+                    
+                    <span class="label-text">Habilidade 4</span>
+                    <input type="text" class="editable-input" value="Comunicação eficaz e Trabalho em Equipe">
+                </div>
+            </section>
+
+            <!-- Contatos Editáveis -->
+            <section>
+                <h2>Contato & Links</h2>
+                <div class="links-group">
+                    <span class="label-text">E-mail para contato</span>
+                    <input type="email" class="editable-input" value="seu.email@exemplo.com" placeholder="seu.email@exemplo.com">
+                    
+                    <span class="label-text">Link do LinkedIn</span>
+                    <input type="url" class="editable-input" value="https://linkedin.com/in/seu-usuario" placeholder="https://linkedin.com/in/seu-usuario">
+                    
+                    <span class="label-text">Link do GitHub</span>
+                    <input type="url" class="editable-input" value="https://github.com/seu-usuario" placeholder="https://github.com/seu-usuario">
+                </div>
+            </section>
+        </form>
+    </div>
+
+</body>
+</html>
